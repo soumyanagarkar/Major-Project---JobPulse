@@ -1,0 +1,25 @@
+@'
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Build files
+dist/
+build/
+
+# Local uploads and logs
+server/uploads/resumes/
+*.log
+'@ | Add-Content .gitignore

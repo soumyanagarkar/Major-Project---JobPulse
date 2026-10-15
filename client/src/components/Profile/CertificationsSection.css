@@ -1,0 +1,347 @@
+.certifications-section {
+  width: 100%;
+  padding: 10px 0 40px;
+}
+
+
+/* HEADER */
+
+.certifications-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 28px;
+}
+
+.certifications-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0 0 8px;
+
+  color: #21479d;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.certifications-header h2 svg {
+  font-size: 27px;
+}
+
+.certifications-header p {
+  margin: 0;
+
+  color: #7d8fb3;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* ADD BUTTON */
+
+.add-certification-btn,
+.empty-add-certification-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 14px 22px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #38bdf8
+  );
+
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-certification-btn:hover,
+.empty-add-certification-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(37, 99, 235, 0.3);
+}
+
+
+/* LIST */
+
+.certifications-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* CARD */
+
+.certification-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  width: 100%;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7f0;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(15, 23, 42, 0.08);
+
+  transition: 0.2s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(15, 23, 42, 0.12);
+}
+
+
+/* NUMBER */
+
+.certification-number {
+  flex-shrink: 0;
+
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #38bdf8
+  );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+
+/* TEXTAREA */
+
+.certification-card textarea {
+  flex: 1;
+
+  min-height: 90px;
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  resize: vertical;
+
+  border: 1px solid #d5dce8;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+  color: #111827;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.certification-card textarea:focus {
+  background: #ffffff;
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(59, 130, 246, 0.12);
+}
+
+.certification-card textarea::placeholder {
+  color: #94a3b8;
+}
+
+
+/* DELETE */
+
+.delete-certification-btn {
+  flex-shrink: 0;
+
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #fee2e2;
+
+  color: #ef4444;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.delete-certification-btn:hover {
+  background: #ef4444;
+
+  color: white;
+
+  transform: scale(1.05);
+}
+
+
+/* EMPTY */
+
+.empty-certifications {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px;
+
+  background: white;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 18px;
+
+  text-align: center;
+}
+
+.empty-certifications > svg {
+  margin-bottom: 15px;
+
+  font-size: 42px;
+
+  color: #3b82f6;
+}
+
+.empty-certifications h3 {
+  margin: 0 0 8px;
+
+  color: #172033;
+
+  font-size: 21px;
+}
+
+.empty-certifications p {
+  margin: 0 0 20px;
+
+  color: #7d8fb3;
+
+  font-size: 14px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .certifications-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .add-certification-btn {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .certifications-header h2 {
+    font-size: 26px;
+  }
+
+  .certification-card {
+    padding: 16px;
+
+    gap: 12px;
+  }
+
+  .certification-number {
+    width: 36px;
+
+    height: 36px;
+  }
+
+  .certification-card textarea {
+    min-height: 110px;
+
+    font-size: 14px;
+  }
+
+  .delete-certification-btn {
+    width: 36px;
+
+    height: 36px;
+  }
+}

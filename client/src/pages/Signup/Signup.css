@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #020617, #0f172a, #1e3a8a);
+  padding: 20px;
+}
+
+.signup-card {
+  width: 430px;
+  background: rgba(255, 255, 255, .08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #60a5fa;
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  color: white;
+}
+
+.signup-card h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.step-indicator div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  font-weight: 600;
+}
+
+.signup-card h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.signup-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .1);
+  color: white;
+  outline: none;
+  font-size: 15px;
+}
+
+.signup-card input::placeholder {
+  color: #cbd5e1;
+}
+
+
+/* =========================================
+   PASSWORD INPUT + EYE BUTTON
+   ========================================= */
+
+.password-input-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding: 14px 50px 14px 14px;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+  color: #cbd5e1;
+
+  z-index: 10;
+}
+
+.password-toggle:hover {
+  color: white;
+  background: transparent;
+}
+
+.password-toggle svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+
+/* =========================================
+   TERMS
+   ========================================= */
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.terms input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.terms label {
+  white-space: nowrap;
+  font-size: 14px;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   SIGNUP BUTTON
+   ========================================= */
+
+.signup-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, .4);
+}
+
+.signup-btn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   MESSAGES
+   ========================================= */
+
+.error-message {
+  color: #ef4444;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: #22c55e;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+/* =========================================
+   LOGIN LINK
+   ========================================= */
+
+.login-link {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.login-link span {
+  color: #38bdf8;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.login-link span:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+  .signup-card {
+    width: 100%;
+    padding: 30px 25px;
+  }
+
+}

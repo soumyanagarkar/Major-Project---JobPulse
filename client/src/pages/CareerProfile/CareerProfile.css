@@ -1,0 +1,442 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+.profile-page{
+
+min-height:100vh;
+
+padding:35px;
+
+background:linear-gradient(135deg,#020617,#0f172a,#1e3a8a);
+
+display:flex;
+
+gap:30px;
+
+}
+
+.profile-content{
+
+flex:1;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.profile-topbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.home-btn{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+border:none;
+
+padding:14px 20px;
+
+border-radius:14px;
+
+cursor:pointer;
+
+backdrop-filter:blur(20px);
+
+transition:.3s;
+
+}
+
+.home-btn:hover{
+
+background:#2563eb;
+
+}
+
+.save-btn{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:14px 24px;
+
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+border:none;
+
+border-radius:14px;
+
+color:white;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:0 15px 35px rgba(37,99,235,.3);
+
+}
+
+.save-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.welcome-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+padding:35px;
+
+border-radius:22px;
+
+color:white;
+
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+.welcome-card h1{
+
+font-size:34px;
+
+margin-bottom:10px;
+
+}
+
+.welcome-card p{
+
+color:#dbeafe;
+
+line-height:1.7;
+
+}
+
+.card-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:22px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.card h2{
+
+margin-bottom:20px;
+
+color:#1e3a8a;
+
+font-size:24px;
+
+}
+
+.card input,
+.card select,
+.card textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:18px;
+
+border:1px solid #d1d5db;
+
+border-radius:12px;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.card input:focus,
+.card textarea:focus,
+.card select:focus{
+
+border-color:#2563eb;
+
+box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+.card textarea{
+
+height:130px;
+
+resize:none;
+
+}
+
+.loading{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+font-size:24px;
+
+font-weight:600;
+
+color:white;
+
+background:#020617;
+
+}
+
+@media(max-width:1100px){
+
+.profile-page{
+
+flex-direction:column;
+
+}
+
+.card-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+.profile-section-placeholder {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  padding: 40px;
+  min-height: 300px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.profile-section-placeholder h2 {
+  margin: 0 0 12px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #21408f;
+}
+
+.profile-section-placeholder p {
+  margin: 0;
+  color: #64748b;
+  font-size: 17px;
+}
+
+/* =========================================
+   SKILL MODAL
+========================================= */
+
+.skill-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.skill-modal {
+  width: 440px;
+  max-width: 90%;
+
+  background: #111827;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 18px;
+
+  padding: 28px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+.skill-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill-modal-header h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 24px;
+}
+
+.skill-modal-close {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.skill-modal-close:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.skill-modal p {
+  margin: 12px 0 20px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+.skill-modal input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border-radius: 10px;
+
+  border: 1px solid #334155;
+
+  background: #0f172a;
+
+  color: white;
+
+  outline: none;
+
+  font-size: 15px;
+}
+
+.skill-modal input:focus {
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 3px rgba(
+      59,
+      130,
+      246,
+      0.15
+    );
+}
+
+.skill-modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 22px;
+}
+
+.skill-cancel-btn,
+.skill-add-btn {
+  border: none;
+
+  padding: 11px 18px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.skill-cancel-btn {
+  background: #334155;
+
+  color: white;
+}
+
+.skill-cancel-btn:hover {
+  background: #475569;
+}
+
+.skill-add-btn {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #22b5e9
+  );
+
+  color: white;
+}
+
+.skill-add-btn:hover {
+  transform: translateY(-1px);
+}

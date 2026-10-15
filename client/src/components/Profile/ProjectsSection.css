@@ -1,0 +1,410 @@
+/* =========================================================
+   PROJECTS SECTION
+   ========================================================= */
+
+.projects-section {
+  width: 100%;
+  padding: 10px 0 40px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.section-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0 0 8px;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #21479d;
+}
+
+.section-header h2 svg {
+  font-size: 27px;
+}
+
+.section-header p {
+  margin: 0;
+
+  color: #7d8fb3;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ADD PROJECT BUTTON
+   ========================================================= */
+
+.add-project-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 14px 22px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #38bdf8
+  );
+
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-project-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.35);
+}
+
+.add-project-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   PROJECT LIST
+   ========================================================= */
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+.project-card {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  width: 100%;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7f0;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #b9c9e8;
+
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+   ========================================================= */
+
+.project-number {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #38bdf8
+  );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  box-shadow:
+    0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================================
+   PROJECT TEXTAREA
+   ========================================================= */
+
+.project-card textarea {
+  flex: 1;
+
+  min-height: 105px;
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  resize: vertical;
+
+  border: 1px solid #d5dce8;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+  color: #111827;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.project-card textarea::placeholder {
+  color: #94a3b8;
+}
+
+.project-card textarea:focus {
+  background: #ffffff;
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+
+/* =========================================================
+   DELETE PROJECT BUTTON
+   ========================================================= */
+
+.delete-project-btn {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #fee2e2;
+
+  color: #ef4444;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.delete-project-btn:hover {
+  background: #ef4444;
+
+  color: #ffffff;
+
+  transform: scale(1.05);
+}
+
+.delete-project-btn:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   EMPTY PROJECT STATE
+   ========================================================= */
+
+.empty-projects {
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.empty-projects > svg {
+  margin-bottom: 16px;
+
+  font-size: 42px;
+
+  color: #3b82f6;
+}
+
+.empty-projects h3 {
+  margin: 0 0 8px;
+
+  color: #172033;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.empty-projects p {
+  margin: 0;
+
+  color: #7d8fb3;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .add-project-btn {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .projects-section {
+    padding: 5px 0 30px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+
+  .section-header p {
+    font-size: 14px;
+  }
+
+  .project-card {
+    padding: 16px;
+
+    gap: 12px;
+  }
+
+  .project-number {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+  }
+
+  .project-card textarea {
+    min-height: 120px;
+
+    padding: 12px;
+
+    font-size: 14px;
+  }
+
+  .delete-project-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .project-card {
+    display: grid;
+
+    grid-template-columns: 38px 1fr;
+  }
+
+  .project-card textarea {
+    grid-column: 1 / -1;
+  }
+
+  .delete-project-btn {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+  }
+
+}

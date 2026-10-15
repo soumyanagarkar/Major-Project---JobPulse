@@ -1,0 +1,400 @@
+.education-section {
+  width: 100%;
+}
+
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.education-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.education-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #22b8f0
+  );
+
+  color: white;
+
+  font-size: 24px;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.education-heading h2 {
+  margin: 0 0 5px;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #24499a;
+}
+
+.education-heading p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* ================================= */
+/* ADD BUTTON */
+/* ================================= */
+
+.add-education-btn {
+  border: none;
+
+  padding: 14px 22px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #22b8f0
+  );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.add-education-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ================================= */
+/* EMPTY */
+/* ================================= */
+
+.education-empty {
+  min-height: 300px;
+
+  background: white;
+
+  border-radius: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 35px;
+
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.education-empty > svg {
+  font-size: 44px;
+
+  color: #60a5fa;
+
+  margin-bottom: 15px;
+}
+
+.education-empty h3 {
+  margin: 0 0 8px;
+
+  font-size: 21px;
+
+  color: #17213a;
+}
+
+.education-empty p {
+  max-width: 500px;
+
+  margin: 0 0 20px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.empty-education-btn {
+  border: none;
+
+  padding: 11px 18px;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* ================================= */
+/* EDUCATION CARD */
+/* ================================= */
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 28px;
+
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.education-card-header {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.education-card-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 20px;
+}
+
+.education-card-header h3 {
+  margin: 0 0 4px;
+
+  font-size: 19px;
+
+  color: #17213a;
+}
+
+.education-card-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* ================================= */
+/* DELETE */
+/* ================================= */
+
+.delete-education-btn {
+  margin-left: auto;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #fef2f2;
+
+  color: #ef4444;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.delete-education-btn:hover {
+  background: #fee2e2;
+}
+
+
+/* ================================= */
+/* FORM */
+/* ================================= */
+
+.education-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.education-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.education-field.full {
+  grid-column: 1 / -1;
+}
+
+.education-field label {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #475569;
+}
+
+.education-field input {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #f8fafc;
+
+  color: #17213a;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+.education-field input:focus {
+  border-color: #3b82f6;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+
+/* ================================= */
+/* INFO */
+/* ================================= */
+
+.education-info {
+  margin-top: 20px;
+
+  padding: 16px 20px;
+
+  border-radius: 14px;
+
+  background: rgba(37, 99, 235, 0.08);
+
+  border: 1px solid rgba(37, 99, 235, 0.12);
+
+  display: flex;
+
+  gap: 8px;
+
+  font-size: 14px;
+
+  color: #475569;
+}
+
+.education-info strong {
+  color: #2563eb;
+}
+
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-education-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .education-heading h2 {
+    font-size: 27px;
+  }
+
+  .education-card {
+    padding: 22px;
+  }
+
+  .education-form {
+    grid-template-columns: 1fr;
+  }
+
+  .education-field.full {
+    grid-column: auto;
+  }
+
+}

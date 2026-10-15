@@ -1,0 +1,355 @@
+/* ==========================================
+   Resume Section
+========================================== */
+
+.resume-section {
+  width: 100%;
+  animation: fadeIn .35s ease;
+}
+
+.resume-header {
+  margin-bottom: 30px;
+}
+
+.resume-header h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.resume-header p {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   Resume Card
+========================================== */
+
+.resume-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  padding: 35px;
+
+  background: white;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 15px 35px rgba(15,23,42,.08);
+
+  margin-bottom: 30px;
+
+  border: 1px solid #e2e8f0;
+
+  transition: .3s;
+}
+
+.resume-card:hover {
+  transform: translateY(-5px);
+}
+
+.resume-icon {
+  width: 90px;
+  height: 90px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg,#2563eb,#38bdf8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 42px;
+
+  color: white;
+
+  flex-shrink: 0;
+}
+
+.resume-details {
+  flex: 1;
+}
+
+.resume-details h3 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #0f172a;
+  word-break: break-word;
+}
+
+/* ==========================================
+   Resume Info
+========================================== */
+
+.resume-info {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.info-box {
+  padding: 18px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.info-box span {
+  display: block;
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.info-box strong {
+  color: #0f172a;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.success {
+  color: #16a34a !important;
+}
+
+/* ==========================================
+   Score Cards
+========================================== */
+
+.resume-score-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.score-card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow:
+      0 12px 25px rgba(15,23,42,.06);
+
+  transition: .3s;
+}
+
+.score-card:hover {
+  transform: translateY(-6px);
+}
+
+.score-card h4 {
+  color: #64748b;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.score-card h2 {
+  font-size: 48px;
+  margin-bottom: 12px;
+
+  background: linear-gradient(135deg,#2563eb,#38bdf8);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.score-card p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.resume-actions button,
+.resume-actions a {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  padding: 15px 28px;
+
+  border-radius: 14px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: .3s;
+
+  cursor: pointer;
+}
+
+.upload-btn {
+  border: none;
+  background: linear-gradient(135deg,#2563eb,#38bdf8);
+  color: white;
+}
+
+.upload-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(37,99,235,.30);
+}
+
+.download-btn {
+  background: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.download-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.delete-btn {
+  border: none;
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:992px){
+
+.resume-card{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.resume-info{
+
+grid-template-columns:1fr;
+
+}
+
+.resume-score-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.resume-header h2{
+
+font-size:28px;
+
+}
+
+.resume-card{
+
+padding:25px;
+
+}
+
+.resume-icon{
+
+width:75px;
+
+height:75px;
+
+font-size:34px;
+
+}
+
+.resume-details h3{
+
+font-size:22px;
+
+}
+
+.resume-actions{
+
+flex-direction:column;
+
+}
+
+.resume-actions button,
+.resume-actions a{
+
+justify-content:center;
+
+width:100%;
+
+}
+
+.score-card h2{
+
+font-size:38px;
+
+}
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+.success{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#16a34a;
+    font-weight:700;
+}
+
+.danger{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#dc2626;
+    font-weight:700;
+}

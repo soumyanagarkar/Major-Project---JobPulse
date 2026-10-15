@@ -1,0 +1,928 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+   LOGIN CONTAINER
+========================================= */
+
+.login-container {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.25),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(6, 182, 212, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #020617,
+      #0f172a,
+      #1e3a8a
+    );
+
+  padding: 20px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.login-card {
+  width: 430px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 20px;
+
+  padding: 40px;
+
+  color: white;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45);
+
+  animation: loginCardAppear 0.5s ease;
+}
+
+
+@keyframes loginCardAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn {
+  background: none;
+
+  border: none;
+
+  color: #60a5fa;
+
+  cursor: pointer;
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+
+  transition: 0.25s;
+}
+
+
+.back-btn:hover {
+  color: white;
+
+  transform: translateX(-3px);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.login-card h1 {
+  text-align: center;
+
+  margin-bottom: 10px;
+
+  font-size: 32px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.subtitle {
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.login-card input {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid transparent;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: 0.25s;
+}
+
+
+.login-card input::placeholder {
+  color: #cbd5e1;
+}
+
+
+.login-card input:focus {
+  border-color: #38bdf8;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  box-shadow:
+    0 0 0 3px rgba(56, 189, 248, 0.08);
+}
+
+
+/* =========================================
+   PASSWORD BOX
+========================================= */
+
+.password-box {
+  position: relative;
+}
+
+
+.password-box input {
+  padding-right: 65px;
+}
+
+
+/* =========================================
+   SHOW PASSWORD BUTTON
+========================================= */
+
+.show-btn {
+  position: absolute;
+
+  right: 10px;
+
+  top: 8px;
+
+  background: none;
+
+  border: none;
+
+  color: #38bdf8;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  padding: 6px;
+
+  transition: 0.2s;
+}
+
+
+.show-btn:hover {
+  color: white;
+}
+
+
+/* =========================================
+   LOGIN OPTIONS
+========================================= */
+
+.login-options {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin: 15px 0;
+
+  font-size: 14px;
+
+  color: #cbd5e1;
+}
+
+
+/* =========================================
+   REMEMBER ME
+========================================= */
+
+.remember {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  cursor: pointer;
+}
+
+
+.remember input {
+  width: 15px;
+
+  height: 15px;
+
+  margin: 0;
+
+  cursor: pointer;
+
+  accent-color: #2563eb;
+}
+
+
+/* =========================================
+   FORGOT PASSWORD
+========================================= */
+
+.forgot {
+  background: none;
+
+  border: none;
+
+  padding: 0;
+
+  color: #38bdf8;
+
+  cursor: pointer;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+
+.forgot:hover {
+  color: white;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.error-message {
+  color: #f87171;
+
+  background: rgba(239, 68, 68, 0.08);
+
+  border: 1px solid rgba(239, 68, 68, 0.2);
+
+  border-radius: 8px;
+
+  padding: 9px 12px;
+
+  margin-bottom: 10px;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #06b6d4
+    );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.login-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+
+.login-btn:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================
+   SIGNUP LINK
+========================================= */
+
+.signup-link {
+  text-align: center;
+
+  margin-top: 25px;
+
+  font-size: 14px;
+
+  color: #cbd5e1;
+}
+
+
+.signup-link span {
+  margin-left: 5px;
+
+  color: #38bdf8;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+
+.signup-link span:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   PASSWORD MODAL OVERLAY
+========================================================= */
+
+.modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background:
+    rgba(2, 6, 23, 0.78);
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+
+  animation: overlayAppear 0.2s ease;
+}
+
+
+@keyframes overlayAppear {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   PASSWORD MODAL
+========================================================= */
+
+.password-modal {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 430px;
+
+  padding: 38px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 23, 42, 0.98),
+      rgba(15, 23, 42, 0.94)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.65);
+
+  color: white;
+
+  animation: modalAppear 0.25s ease;
+}
+
+
+@keyframes modalAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   MODAL CLOSE BUTTON
+========================================================= */
+
+.modal-close {
+  position: absolute;
+
+  top: 15px;
+
+  right: 18px;
+
+  width: 34px;
+
+  height: 34px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #94a3b8;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+
+.modal-close:hover {
+  background: rgba(239, 68, 68, 0.15);
+
+  color: #f87171;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   MODAL ICON
+========================================================= */
+
+.modal-icon {
+  width: 58px;
+
+  height: 58px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.2),
+      rgba(6, 182, 212, 0.15)
+    );
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+
+  font-size: 27px;
+}
+
+
+/* =========================================================
+   MODAL HEADING
+========================================================= */
+
+.password-modal h2 {
+  text-align: center;
+
+  margin-bottom: 10px;
+
+  font-size: 25px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   MODAL DESCRIPTION
+========================================================= */
+
+.password-modal p {
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   MODAL INPUT
+========================================================= */
+
+.modal-input {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  margin-bottom: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  transition: 0.25s;
+}
+
+
+.modal-input::placeholder {
+  color: #64748b;
+}
+
+
+.modal-input:focus {
+  border-color: #38bdf8;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  box-shadow:
+    0 0 0 3px rgba(56, 189, 248, 0.07);
+}
+
+
+/* =========================================================
+   MODAL PASSWORD BOX
+========================================================= */
+
+.modal-password-box {
+  position: relative;
+}
+
+
+.modal-password-box .modal-input {
+  padding-right: 60px;
+}
+
+
+/* =========================================================
+   MODAL SHOW PASSWORD
+========================================================= */
+
+.modal-show-btn {
+  position: absolute;
+
+  right: 10px;
+
+  top: 8px;
+
+  border: none;
+
+  background: none;
+
+  color: #38bdf8;
+
+  cursor: pointer;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  padding: 6px;
+}
+
+
+.modal-show-btn:hover {
+  color: white;
+}
+
+
+/* =========================================================
+   MODAL ERROR
+========================================================= */
+
+.modal-error {
+  color: #f87171 !important;
+
+  background: rgba(239, 68, 68, 0.08);
+
+  border: 1px solid rgba(239, 68, 68, 0.2);
+
+  border-radius: 8px;
+
+  padding: 9px 12px;
+
+  margin: 0 0 14px !important;
+
+  font-size: 12px !important;
+
+  text-align: left !important;
+
+  line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   MODAL SUCCESS
+========================================================= */
+
+.modal-success {
+  color: #4ade80 !important;
+
+  background: rgba(34, 197, 94, 0.08);
+
+  border: 1px solid rgba(34, 197, 94, 0.2);
+
+  border-radius: 8px;
+
+  padding: 9px 12px;
+
+  margin: 0 0 14px !important;
+
+  font-size: 12px !important;
+
+  text-align: left !important;
+
+  line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   MODAL SUBMIT BUTTON
+========================================================= */
+
+.modal-submit {
+  width: 100%;
+
+  padding: 13px;
+
+  margin-top: 4px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #06b6d4
+    );
+
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.modal-submit:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+
+.modal-submit:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   MODAL BACK BUTTON
+========================================================= */
+
+.modal-back {
+  width: 100%;
+
+  margin-top: 13px;
+
+  padding: 9px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #94a3b8;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.modal-back:hover {
+  color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .login-container {
+    padding: 15px;
+  }
+
+
+  .login-card {
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 30px 24px;
+  }
+
+
+  .login-card h1 {
+    font-size: 27px;
+  }
+
+
+  .password-modal {
+    padding: 32px 24px;
+  }
+
+
+  .password-modal h2 {
+    font-size: 22px;
+  }
+
+}
+
+
+@media (max-width: 400px) {
+
+  .login-options {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+
+  .login-card {
+    padding: 25px 18px;
+  }
+
+
+  .password-modal {
+    padding: 30px 20px;
+  }
+
+}
